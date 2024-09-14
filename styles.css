@@ -36,6 +36,7 @@ main {
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s;
+    position: relative;
 }
 
 .diamond-option:hover {
@@ -75,9 +76,22 @@ main {
     margin-bottom: 20px;
 }
 
-.payment-methods label {
+.payment-option {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid #f7c600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.payment-option input {
+    margin-right: 10px;
+}
+
+.payment-option:hover {
+    background-color: #444;
 }
 
 button {
@@ -88,6 +102,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s;
 }
 
 button:hover {
