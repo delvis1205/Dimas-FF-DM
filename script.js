@@ -5,9 +5,8 @@ document.getElementById("recargaForm").addEventListener("submit", function (even
   const playerID = document.getElementById("playerID").value;
   const playerName = document.getElementById("playerName").value;
   const contact = document.getElementById("contact").value;
-  const paymentMethod = document.getElementById("paymentMethod").value;
 
-  const message = `Pedido de Recarga:\nDiamantes: ${diamantes}\nID do Jogador: ${playerID}\nNome do Jogador: ${playerName}\nWhatsApp: ${contact}\nMétodo de Pagamento: ${paymentMethod}`;
+  const message = `Pedido de Recarga:\nDiamantes: ${diamantes}\nID do Jogador: ${playerID}\nNome do Jogador: ${playerName}\nWhatsApp: ${contact}`;
 
   const whatsappUrl = `https://wa.me/244930441438?text=${encodeURIComponent(message)}`;
 
