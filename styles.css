@@ -1,105 +1,144 @@
+/* Estilização geral do corpo */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #0D1B2A;
-  color: #F5F5F5;
-  margin: 0;
-  padding: 0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #1C1C1C; /* Cor de fundo semelhante ao padrão do Free Fire */
 }
 
+/* Estilização do cabeçalho */
 header {
-  text-align: center;
-  background-color: #1B263B;
-  padding: 20px;
+    text-align: center;
+    padding: 20px;
+    background: #000; /* Preto sólido */
+    color: #FFD700; /* Dourado para o texto */
 }
 
-header img.logo {
-  width: 120px;
+.logo {
+    width: 100px;
+    margin-bottom: 10px;
 }
 
-header h1 {
-  color: #FF9505;
-  margin: 0;
+h1 {
+    font-size: 2.5em;
 }
 
-header h2 {
-  color: #F5F5F5;
-  margin: 0;
+h2 {
+    font-size: 1.5em;
 }
 
-.content {
-  text-align: center;
-  margin: 20px;
+/* Imagem principal abaixo do cabeçalho */
+.main-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
 }
 
-h3 {
-  color: #FF9505;
-  margin-bottom: 20px;
-}
-
-form {
-  display: inline-block;
-  background-color: #1B263B;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+/* Estilização da seleção de diamantes em forma horizontal */
+.diamond-selection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+    margin-bottom: 30px;
 }
 
 .diamond-option {
-  margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #242424;
+    border: 2px solid transparent;
+    padding: 15px;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
 }
 
-label {
-  font-size: 16px;
-  margin-left: 10px;
+.diamond-option:hover {
+    background-color: #FF6F00; /* Laranja brilhante */
+    border: 2px solid #FFD700;
 }
 
-input[type="radio"] {
-  margin-right: 10px;
+.diamond-option input {
+    display: none;
 }
 
-.input-group {
-  margin-top: 15px;
+.diamond-option img {
+    width: 100px;  /* Ajusta o tamanho da imagem */
+    margin-bottom: 10px;
 }
 
-input[type="text"], select {
-  padding: 10px;
-  width: 100%;
-  border: none;
-  border-radius: 5px;
+.payment-methods {
+    margin-top: 20px;
+    text-align: center;
 }
 
-button {
-  background-color: #FF9505;
-  color: #F5F5F5;
-  border: none;
-  padding: 15px 30px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 20px;
+.payment-methods h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #FFD700; /* Dourado */
 }
 
-button:hover {
-  background-color: #FFB85C;
+.payment-methods label {
+    display: inline-block;
+    margin: 10px;
+    background-color: #242424;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #FFFFFF;
 }
 
-button:disabled {
-  background-color: #aaa;
-  cursor: not-allowed;
+.payment-methods label:hover {
+    background-color: #FF6F00;
 }
 
-.validation-message {
-  color: #FF9505;
-  margin-top: 15px;
+.payment-methods input {
+    display: none;
 }
 
-footer {
-  text-align: center;
-  background-color: #1B263B;
-  padding: 20px;
-  color: #F5F5F5;
+.submit-btn {
+    background-color: #FF6F00; /* Laranja brilhante */
+    color: #FFFFFF;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
 }
 
-footer p {
-  margin: 5px 0;
+.submit-btn:hover {
+    background-color: #FFD700; /* Dourado */
 }
 
+/* Imagens dos personagens */
+.character-images {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.character-left, .character-right {
+    width: 200px;
+    height: auto;
+}
+
+/* Estilo do conteúdo principal */
+.content {
+    padding: 20px;
+    background-color: #2C2C2C; /* Cor de fundo do conteúdo */
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #FFFFFF;
+  }
