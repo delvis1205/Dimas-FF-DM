@@ -3,87 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carregamento de Diamantes Free Fire</title>
+    <title>FF Dimas Angola</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>DIMAS FF DM</h1>
-        <h2>Recargas do Dimas Free Fire em Angola</h2>
+        <h1>FF Dimas Angola</h1>
+        <nav>
+            <a href="#produtos">Produtos</a>
+            <a href="#contato">Contato</a>
+        </nav>
     </header>
-    
+
     <main>
-        <section class="diamond-selection">
-            <h3>Selecione a quantidade de Diamantes:</h3>
-            <div class="diamond-options">
-                <div class="diamond-option" data-diamonds="100" data-price="1340">
-                    <span class="diamonds">100 Diamantes</span>
-                    <span class="price">1340 Kz</span>
-                </div>
-                <div class="diamond-option" data-diamonds="200" data-price="2680">
-                    <span class="diamonds">200 Diamantes</span>
-                    <span class="price">2680 Kz</span>
-                </div>
-                <div class="diamond-option" data-diamonds="300" data-price="4020">
-                    <span class="diamonds">300 Diamantes</span>
-                    <span class="price">4020 Kz</span>
-                </div>
-                <div class="diamond-option" data-diamonds="400" data-price="5360">
-                    <span class="diamonds">400 Diamantes</span>
-                    <span class="price">5360 Kz</span>
-                </div>
-                <div class="diamond-option" data-diamonds="500" data-price="6700">
-                    <span class="diamonds">500 Diamantes</span>
-                    <span class="price">6700 Kz</span>
-                </div>
-                <div class="diamond-option" data-diamonds="1000" data-price="13400">
-                    <span class="diamonds">1000 Diamantes</span>
-                    <span class="price">13400 Kz</span>
-                </div>
-                <div class="diamond-option" data-diamonds="5000" data-price="67000">
-                    <span class="diamonds">5000 Diamantes</span>
-                    <span class="price">67000 Kz</span>
-                </div>
-            </div>
-        </section>
-        
-        <section class="payment-methods">
-            <h3>Métodos de Pagamento:</h3>
-            <label class="payment-option">
-                <input type="radio" name="paymentMethod" value="Multicaixa Express" required>
-                <span>Multicaixa Express</span>
-            </label>
-            <label class="payment-option">
-                <input type="radio" name="paymentMethod" value="Banco BAI" required>
-                <span>Banco BAI</span>
-            </label>
-            <label class="payment-option">
-                <input type="radio" name="paymentMethod" value="Banco BFA" required>
-                <span>Banco BFA</span>
-            </label>
-        </section>
-        
-        <section class="order-form">
-            <h3>Formulário de Pedido</h3>
-            <form id="orderForm">
-                <label for="contact">Seu Contato:</label>
-                <input type="text" id="contact" name="contact" required>
-                
-                <label for="username">Nome do Jogador:</label>
-                <input type="text" id="username" name="username" required>
-                
-                <label for="playerId">ID do Jogador:</label>
-                <input type="text" id="playerId" name="playerId" required>
-                
-                <button type="button" id="loadNowButton">Carregar Agora</button>
+        <section id="produtos">
+            <h2>Escolha a quantidade de diamantes</h2>
+            <form id="pedido-form">
+                <label for="diamantes">Quantidade:</label>
+                <select id="diamantes" name="diamantes">
+                    <option value="100" data-preco="1340">100 Diamantes - 1340 Kz</option>
+                    <option value="200" data-preco="2680">200 Diamantes - 2680 Kz</option>
+                    <option value="300" data-preco="4020">300 Diamantes - 4020 Kz</option>
+                    <option value="400" data-preco="5360">400 Diamantes - 5360 Kz</option>
+                    <option value="5000" data-preco="67000">5000 Diamantes - 67000 Kz</option>
+                </select>
+
+                <label for="id-jogador">ID do Jogador:</label>
+                <input type="text" id="id-jogador" name="id-jogador" required>
+
+                <label for="nome-jogador">Nome do Jogador:</label>
+                <input type="text" id="nome-jogador" name="nome-jogador" required>
+
+                <label for="metodo-pagamento">Método de Pagamento:</label>
+                <select id="metodo-pagamento" name="metodo-pagamento">
+                    <option value="Multicaixa Express">Multicaixa Express</option>
+                    <option value="Banco BAI">Banco BAI</option>
+                    <option value="Banco BFA">Banco BFA</option>
+                </select>
+
+                <button type="submit">Finalizar Pedido</button>
             </form>
+        </section>
+
+        <section id="contato">
+            <h2>Entre em Contato</h2>
+            <p>Envie seu pedido para o WhatsApp: <a href="https://wa.me/244930441438" target="_blank">Clique aqui</a></p>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Dimas FF Angola. Todos os direitos reservados.</p>
+        <p>&copy; 2024 FF Dimas Angola. Todos os direitos reservados.</p>
     </footer>
-    
+
     <script src="script.js"></script>
 </body>
     </html>
