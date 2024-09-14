@@ -1,36 +1,14 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('orderForm');
-    const diamondOptions = document.querySelectorAll('.diamond-option');
-    const loadNowButton = document.getElementById('loadNowButton');
+document.getElementById('pedido-form').addEventListener('submit', function(event) {
+    event.preventDefault();
     
-    let selectedDiamonds = '';
-    let selectedPrice = '';
-
-    diamondOptions.forEach(option => {
-        option.addEventListener('click', function () {
-            selectedDiamonds = this.getAttribute('data-diamonds');
-            selectedPrice = this.getAttribute('data-price');
-
-            diamondOptions.forEach(opt => opt.style.backgroundColor = '#333');
-            this.style.backgroundColor = '#444';
-        });
-    });
-
-    loadNowButton.addEventListener('click', function () {
-        if (!selectedDiamonds) {
-            alert('Por favor, selecione uma quantidade de diamantes.');
-            return;
-        }
-
-        const contact = document.getElementById('contact').value;
-        const username = document.getElementById('username').value;
-        const playerId = document.getElementById('playerId').value;
-        const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked');
-
-        if (!paymentMethod) {
-            alert('Por favor, selecione um método de pagamento.');
-            return;
-        }
-
-        const paymentMethodValue = paymentMethod.value;
-        const message = `Novo pedido!\n\nDiamantes: ${selectedDiamonds}\nPreço: ${selectedPrice} Kz\nContato: ${contact}\nNome do Jogador: ${username}\nID do Jogador: ${playerId}\nMétodo de Pagamento: ${paymentMethodValue}`;
+    const diamantes = document.getElementById('diamantes').value;
+    const preco = document.querySelector(`#diamantes option[value="${diamantes}"]`).dataset.preco;
+    const idJogador = document.getElementById('id-jogador').value;
+    const nomeJogador = document.getElementById('nome-jogador').value;
+    const metodoPagamento = document.getElementById('metodo-pagamento').value;
+    
+    const mensagem = `Pedido de Diamantes:\nQuantidade: ${diamantes} Diamantes\nPreço: ${preco} Kz\nID do Jogador: ${idJogador}\nNome do Jogador: ${nomeJogador}\nMétodo de Pagamento: ${metodoPagamento}`;
+    const linkWhatsApp = `https://wa.me/244930441438?text=${encodeURIComponent(mensagem)}`;
+    
+    window.location.href = linkWhatsApp;
+});
