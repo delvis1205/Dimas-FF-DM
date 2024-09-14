@@ -1,76 +1,85 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DIMAS FF DM - Recargas de Diamantes Free Fire</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIMAS FF DM</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <img src="images/logo-garena.png" alt="Logo Garena" class="logo">
-    <h1>DIMAS FF DM</h1>
-    <h2>Recargas do Dimas Free Fire em Angola</h2>
-  </header>
+    <header>
+        <img src="images/freefire-logo.png" alt="Logo Free Fire" class="logo">
+        <h1>DIMAS FF DM</h1>
+        <h2>Recargas do Dimas Free Fire em Angola</h2>
+    </header>
 
-  <section class="content">
-    <h3>Escolha o pacote de diamantes</h3>
-    <form id="recargaForm">
-      <div class="diamond-option">
-        <input type="radio" id="diamantes100" name="diamantes" value="100">
-        <label for="diamantes100">100 Diamantes - 1340 KZ</label>
-      </div>
-      <div class="diamond-option">
-        <input type="radio" id="diamantes200" name="diamantes" value="200">
-        <label for="diamantes200">200 Diamantes - 2680 KZ</label>
-      </div>
-      <div class="diamond-option">
-        <input type="radio" id="diamantes300" name="diamantes" value="300">
-        <label for="diamantes300">300 Diamantes - 4020 KZ</label>
-      </div>
-      <div class="diamond-option">
-        <input type="radio" id="diamantes5000" name="diamantes" value="5000">
-        <label for="diamantes5000">5000 Diamantes - 67000 KZ</label>
-      </div>
+    <section class="content">
+        <!-- Imagem de destaque -->
+        <img src="images/dimalojo.jpeg" alt="Dima Loja" class="main-image">
 
-      <div class="input-group">
-        <label for="playerID">ID do Jogador:</label>
-        <input type="text" id="playerID" name="playerID" required oninput="validateID()">
-      </div>
+        <h3>Escolha o pacote de diamantes</h3>
+        <form id="recargaForm">
+            <div class="diamond-selection">
+                <label class="diamond-option" for="diamantes100">
+                    <input type="radio" id="diamantes100" name="diamantes" value="100">
+                    <img src="images/dimatop.jpeg" alt="100 Diamantes">
+                    <span>100 Diamantes - 1340 KZ</span>
+                </label>
 
-      <div class="input-group">
-        <label for="playerName">Nome do Jogador:</label>
-        <input type="text" id="playerName" name="playerName" required oninput="validateID()">
-      </div>
+                <label class="diamond-option" for="diamantes200">
+                    <input type="radio" id="diamantes200" name="diamantes" value="200">
+                    <img src="images/dimatop.jpeg" alt="200 Diamantes">
+                    <span>200 Diamantes - 2680 KZ</span>
+                </label>
 
-      <div id="validationMessage" class="validation-message">
-        <!-- A mensagem de validação vai aparecer aqui -->
-      </div>
+                <label class="diamond-option" for="diamantes300">
+                    <input type="radio" id="diamantes300" name="diamantes" value="300">
+                    <img src="images/dimatop.jpeg" alt="300 Diamantes">
+                    <span>300 Diamantes - 4020 KZ</span>
+                </label>
 
-      <div class="input-group">
-        <label for="paymentMethod">Método de Pagamento:</label>
-        <select id="paymentMethod" name="paymentMethod" required>
-          <option value="">Selecione</option>
-          <option value="Multicaixa Express">Multicaixa Express</option>
-          <option value="BAI">Banco BAI</option>
-          <option value="BFA">Banco BFA</option>
-        </select>
-      </div>
+                <label class="diamond-option" for="diamantes5000">
+                    <input type="radio" id="diamantes5000" name="diamantes" value="5000">
+                    <img src="images/dimatop.jpeg" alt="5000 Diamantes">
+                    <span>5000 Diamantes - 67000 KZ</span>
+                </label>
+            </div>
 
-      <div class="input-group">
-        <label for="contact">Seu Número de WhatsApp:</label>
-        <input type="text" id="contact" name="contact" required>
-      </div>
+            <!-- Métodos de pagamento -->
+            <div class="payment-methods">
+                <h4>Métodos de pagamento</h4>
+                <label>
+                    <input type="radio" name="pagamento" value="Multicaixa Express">
+                    Multicaixa Express
+                </label>
+                <label>
+                    <input type="radio" name="pagamento" value="BAI">
+                    BAI
+                </label>
+                <label>
+                    <input type="radio" name="pagamento" value="BFA">
+                    BFA
+                </label>
+            </div>
 
-      <button type="submit" id="submitButton" disabled>Finalizar Pedido</button>
-    </form>
-  </section>
+            <!-- Campo para ID do jogador -->
+            <div class="form-group">
+                <label for="playerId">ID do Jogador</label>
+                <input type="text" id="playerId" name="playerId" placeholder="Digite o ID do jogador" required>
+            </div>
 
-  <footer>
-    <p>Pagamento via Multicaixa Express, BAI e BFA</p>
-    <p>Todos os direitos reservados © 2024</p>
-  </footer>
+            <!-- Botão para enviar o pedido -->
+            <button type="submit" class="submit-btn" id="enviarPedido">
+                Finalizar Pedido
+            </button>
+        </form>
+    </section>
 
-  <script src="script.js"></script>
+    <aside class="character-images">
+        <img src="images/personagem1.jpeg" alt="Personagem 1" class="character-left">
+        <img src="images/personagem2.jpeg" alt="Personagem 2" class="character-right">
+    </aside>
+
+    <script src="script.js"></script>
 </body>
-</html>
+  </html>
