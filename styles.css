@@ -1,0 +1,105 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #0D1B2A;
+  color: #F5F5F5;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  background-color: #1B263B;
+  padding: 20px;
+}
+
+header img.logo {
+  width: 120px;
+}
+
+header h1 {
+  color: #FF9505;
+  margin: 0;
+}
+
+header h2 {
+  color: #F5F5F5;
+  margin: 0;
+}
+
+.content {
+  text-align: center;
+  margin: 20px;
+}
+
+h3 {
+  color: #FF9505;
+  margin-bottom: 20px;
+}
+
+form {
+  display: inline-block;
+  background-color: #1B263B;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.diamond-option {
+  margin-bottom: 10px;
+}
+
+label {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+.input-group {
+  margin-top: 15px;
+}
+
+input[type="text"], select {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #FF9505;
+  color: #F5F5F5;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #FFB85C;
+}
+
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.validation-message {
+  color: #FF9505;
+  margin-top: 15px;
+}
+
+footer {
+  text-align: center;
+  background-color: #1B263B;
+  padding: 20px;
+  color: #F5F5F5;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
