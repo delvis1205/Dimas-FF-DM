@@ -1,33 +1,105 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('orderForm');
-    const diamondOptions = document.querySelectorAll('.diamond-option');
-    
-    let selectedDiamonds = 0;
-    let selectedPrice = 0;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #141414; /* Cor de fundo escura similar ao Free Fire */
+    color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
 
-    diamondOptions.forEach(option => {
-        option.addEventListener('click', function () {
-            selectedDiamonds = this.getAttribute('data-diamonds');
-            selectedPrice = this.getAttribute('data-price');
+header {
+    background-color: #f7c600; /* Cor amarela padrão do Free Fire */
+    color: #000;
+    text-align: center;
+    padding: 20px;
+}
 
-            diamondOptions.forEach(opt => opt.style.backgroundColor = '#333');
-            this.style.backgroundColor = '#444';
+main {
+    padding: 20px;
+}
 
-            form.onsubmit = function (event) {
-                event.preventDefault();
-                
-                const contact = document.getElementById('contact').value;
-                const username = document.getElementById('username').value;
-                const playerId = document.getElementById('playerId').value;
-                const paymentMethods = Array.from(document.querySelectorAll('input[name="paymentMethod"]:checked'))
-                    .map(el => el.value).join(', ');
+.diamond-selection {
+    margin-bottom: 20px;
+}
 
-                const message = `Novo pedido!\n\nDiamantes: ${selectedDiamonds}\nPreço: ${selectedPrice} Kz\nContato: ${contact}\nNome do Jogador: ${username}\nID do Jogador: ${playerId}\nMétodos de Pagamento: ${paymentMethods}`;
+.diamond-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
 
-                window.open(`https://wa.me/+244930441438?text=${encodeURIComponent(message)}`, '_blank');
-                form.reset();
-                diamondOptions.forEach(opt => opt.style.backgroundColor = '#333');
-            };
-        });
-    });
-});
+.diamond-option {
+    background-color: #333;
+    border: 2px solid #f7c600;
+    border-radius: 10px;
+    padding: 15px;
+    width: calc(33.333% - 20px);
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.diamond-option:hover {
+    background-color: #444;
+}
+
+.game-bubble {
+    background-color: #f7c600;
+    color: #000;
+    border-radius: 15px;
+    display: inline-block;
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
+.order-form {
+    background-color: #333;
+    border: 2px solid #f7c600;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.order-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.order-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.payment-methods {
+    margin-bottom: 20px;
+}
+
+.payment-methods label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+button {
+    background-color: #f7c600;
+    color: #000;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #e0a700;
+}
+
+footer {
+    background-color: #000;
+    color: #f5f5f5;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
