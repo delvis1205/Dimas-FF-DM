@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const playerId = document.getElementById('playerId').value;
         const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
 
-        const message = `Olá DM Meu Novo pedido!\n\nDiamantes: ${selectedDiamonds}\nPreço: ${selectedPrice} Kz\nContato: ${contact}\nNome do Jogador: ${username}\nID do Jogador: ${playerId}\nMétodo de Pagamento: ${paymentMethod}`;
+        const message = `Olá DM! Meu Novo pedido!\n\nDiamantes: ${selectedDiamonds}\nPreço: ${selectedPrice} Kz\nContato: ${contact}\nNome do Jogador: ${username}\nID do Jogador: ${playerId}\nMétodo de Pagamento: ${paymentMethod}`;
 
         window.open(`https://wa.me/+244930441438?text=${encodeURIComponent(message)}`, '_blank');
         form.reset();
