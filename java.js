@@ -33,4 +33,4 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         const paymentMethodValue = paymentMethod.value;
-        const message = `Olá DM! Meu Novo pedido!\n\nDiamantes: ${selectedDiamonds}\nPreço: ${selectedPrice} Kz\nContato: ${contact}\nNome do Jogador: ${username}\nID do Jogador: ${playerId}\nMétodo de Pagamento: ${paymentMethodValue}`;
+        const message = `Novo pedido!\n\nDiamantes: ${selectedDiamonds}\nPreço: ${selectedPrice} Kz\nContato: ${contact}\nNome do Jogador: ${username}\nID do Jogador: ${playerId}\nMétodo de Pagamento: ${paymentMethodValue}`;
