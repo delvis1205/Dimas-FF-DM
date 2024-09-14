@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const diamondOptions = document.querySelectorAll('.diamond-option');
     const loadNowButton = document.getElementById('loadNowButton');
     
-    let selectedDiamonds = 0;
-    let selectedPrice = 0;
+    let selectedDiamonds = '';
+    let selectedPrice = '';
 
     diamondOptions.forEach(option => {
         option.addEventListener('click', function () {
@@ -17,16 +17,20 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     loadNowButton.addEventListener('click', function () {
+        if (!selectedDiamonds) {
+            alert('Por favor, selecione uma quantidade de diamantes.');
+            return;
+        }
+
         const contact = document.getElementById('contact').value;
         const username = document.getElementById('username').value;
         const playerId = document.getElementById('playerId').value;
-        const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+        const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked');
 
-        const message = `Novo pedido!\n\nDiamantes: ${selectedDiamonds}\nPreço: ${selectedPrice} Kz\nContato: ${contact}\nNome do Jogador: ${username}\nID do Jogador: ${playerId}\nMétodo de Pagamento: ${paymentMethod}`;
+        if (!paymentMethod) {
+            alert('Por favor, selecione um método de pagamento.');
+            return;
+        }
 
-        window.open(`https://wa.me/+244930441438?text=${encodeURIComponent(message)}`, '_blank');
-        form.reset();
-        diamondOptions.forEach(opt => opt.style.backgroundColor = '#333');
-    });
-});
-``
+        const paymentMethodValue = paymentMethod.value;
+        const message = `Olá DM! Meu Novo pedido!\n\nDiamantes: ${selectedDiamonds}\nPreço: ${selectedPrice} Kz\nContato: ${contact}\nNome do Jogador: ${username}\nID do Jogador: ${playerId}\nMétodo de Pagamento: ${paymentMethodValue}`;
